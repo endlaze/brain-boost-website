@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.less']
 })
-export class AppComponent {
+export class MainComponent {
   title = 'brain-boost-website';
 }
