@@ -5,8 +5,9 @@ import { ContactService } from '../../services/contact-service/contact.service'
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.less']
+  styleUrls: ['../../../assets/styles/common-styles.less']
 })
+
 export class ContactComponent implements OnInit {
   contactForm: FormGroup
   submitted: Boolean = false

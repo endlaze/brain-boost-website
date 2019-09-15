@@ -5,12 +5,17 @@ import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ContactService {
-  private contactUrl = environment.apiUrl + '/api/contact'
+
+export class FAQService {
+  private faqUrl = environment.apiUrl + '/api/FAQ'
 
   constructor(private http: HttpClient) { }
 
-  public sendMail = (messageInfo) => {
-    return this.http.post(this.contactUrl + '/question', messageInfo, { observe: 'response' })
+  public getFAQ = () => {
+    return this.http.get(this.faqUrl)
+  }
+
+  public postFAQ = (faqObj) => {
+    return this.http.post(this.faqUrl, faqObj)
   }
 }
