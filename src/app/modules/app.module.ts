@@ -1,16 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { MainComponent } from '../components/main-component/main.component';
-import { ContactComponent } from '../components/contact-component/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
+//Services
 import { ContactService } from '../services/contact-service/contact.service'
+import { FAQService } from '../services/faq-service/faq.service'
+//Components
+import { MainComponent } from '../components/main-component/main.component';
+import { ContactComponent } from '../components/contact-component/contact.component';
+import { FAQComponent } from '../components/faq-component/faq.component'
+import { NavComponent } from '../components/nav-component/nav.component'
 
 @NgModule({
   declarations: [
     MainComponent,
-    ContactComponent
+    ContactComponent,
+    FAQComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +26,7 @@ import { ContactService } from '../services/contact-service/contact.service'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ContactService],
+  providers: [ContactService, FAQService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }
