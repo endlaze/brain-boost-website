@@ -10,14 +10,16 @@ import { FAQService } from '../services/faq-service/faq.service'
 import { MainComponent } from '../components/main-component/main.component';
 import { ContactComponent } from '../components/contact-component/contact.component';
 import { FAQComponent } from '../components/faq-component/faq.component'
-import { NavComponent } from '../components/nav-component/nav.component'
+import { NavComponent } from '../components/nav-component/nav.component';
+import { HomeComponent } from '../components/home-component/home.component'
 
 @NgModule({
   declarations: [
     MainComponent,
     ContactComponent,
     FAQComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
