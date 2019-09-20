@@ -5,7 +5,7 @@ import { ROUTES } from '../../../assets/const/constants';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['../../../assets/styles/common-styles.less']
+  styleUrls: ['./nav.component.less']
 })
 
 export class NavComponent implements OnInit {
