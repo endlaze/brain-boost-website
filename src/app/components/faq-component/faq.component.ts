@@ -27,7 +27,7 @@ export class FAQComponent implements OnInit {
         answer: `Según “Alzheimer's Association”, una demencia es el deterioro grave de la capacidad mental de una persona que interfiere en la vida cotidiana de la persona. No es una enfermedad específica, es un término general que describe un conjunto de condiciones que afectan la memoria y otras habilidades mentales.
     Más información en: https://www.alz.org/alzheimer-demencia/que-es-la-demencia`
       },
-      { question: `A quienes afecta la demencia?`,
+      { question: `¿A quiénes afecta la demencia?`,
         answer: `La demencia no afecta a un grupo específico de personas, la mayor cantidad de personas que padecen demencia son adultos mayores, pero la condición demencia puede presentarse en personas de todas las edades.` 
       },
       {
