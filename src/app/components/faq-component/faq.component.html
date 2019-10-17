@@ -21,6 +21,7 @@
         <div class="card-body text-dark" *ngIf="questionObj.selected"
           [ngClass]="{ 'borderless': !questionObj.selected }">
           <p class="card-text">{{questionObj.answer}}</p>
+          <p *ngIf="questionObj.link !== ''">Más información <a class = "link-style" target="_blank" href="{{questionObj.link}}">aquí</a></p>
         </div>
       </div>
     </div>
