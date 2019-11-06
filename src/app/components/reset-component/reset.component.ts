@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ResetService } from '../../services/reset-service/reset.service'
 
 @Component({
@@ -21,7 +21,7 @@ export class ResetComponent implements OnInit {
   isVisible : boolean;
   isVisibleAll : boolean;
 
-  constructor(private activatedRoute: ActivatedRoute, private resetService: ResetService) {
+  constructor(private activatedRoute: ActivatedRoute, private resetService: ResetService, private router: Router) {
     this.getRouteParams();
   }
   
@@ -50,6 +50,7 @@ export class ResetComponent implements OnInit {
       console.log(res.status)
       console.log(res.body)
     });
+    this.router.navigate(['home']);
   }
 
   CheckAll(){
