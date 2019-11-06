@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { ContactComponent } from '../components/contact-component/contact.component'
 import { FAQComponent } from '../components/faq-component/faq.component'
 import { HomeComponent } from '../components/home-component/home.component'
+import { ResetComponent } from '../components/reset-component/reset.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'contact', component: ContactComponent },
   { path: 'faq', component: FAQComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'reset_password', component: ResetComponent },
   { path: '**', redirectTo: '' }
 ];
 
