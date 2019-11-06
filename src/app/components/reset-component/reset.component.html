@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<div class="container">
+  <div class="login-box">
+    <h1>Cambiar contraseña</h1>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input [(ngModel)]="password1" (keyup)="CheckAll()" (focus)="Focus()"
+        (blur)="Blur()" type="password" placeholder="Nueva contraseña">
+    </div>
+
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input [(ngModel)]="password2" (keyup)="CheckMatch()"
+        type="password" placeholder="Confirma tu contraseña">
+    </div>
+
+    <input type="button" (click)="OnClick()" [class]="isEnable ? 'btn-enable' : 'btn-disable'"
+      value="Continuar">
+  </div>
+  
+  <div id="message" class="login-verification-box" [style.display] = "isVisibleAll ? 'block' : 'none'">
+    <p [class]="hasLetter ? 'valid' : 'invalid'">Contiene <b>minúscula</b></p>
+    <p [class]="hasCapital ? 'valid' : 'invalid'">Contiene <b>mayúscula</b></p>
+    <p [class]="hasNumber ? 'valid' : 'invalid'">Contiene <b>número</b></p>
+    <p [class]="hasLength ? 'valid' : 'invalid'">Mínimo <b>8 caracteres</b></p>
+    <p [class]="isMatch ? 'valid' : 'invalid'" [style.visibility] = "isVisible ? 'visible' : 'hidden'">
+      Las contraseñas <b>coinciden</b></p>
+  </div>
+</div>
